@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #214578;
+    --bg: #f7f8fa;
+    --border: #d8e0ea;
+    --text: #10233d;
+    --muted: #71809a;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* 
+   CABEÇALHO
+ */
+.logo{ 
+    width: 36px;
+    height: 36px;
+
+    object-fit: contain;
+}
+
+.topbar {
+    height: 68px;
+    background: var(--navy);
+    color: #fff;
+    box-shadow: 0 1px 4px #0002;
+}
+
+.nav-inner {
+    width: 990px;
+    max-width: calc(100% - 40px);
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+    background: #3b6090;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 24px;
+    color: #79c8e7;
+}
+
+.brand strong {
+    display: block;
+    font-size: 16px;
+}
+
+.brand small {
+    display: block;
+    margin-top: 2px;
+
+    color: #bcd0ea;
+    font-size: 12px;
+}
+
+nav {
+    display: flex;
+    gap: 6px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+
+    padding: 11px 16px;
+    border-radius: 6px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    background: #426594;
+}
+
+/* 
+   LOGIN
+ */
+
+.login-main {
+    min-height: calc(100vh - 138px);
+
+    display: flex;
+    justify-content: center;
+
+    padding-top: 80px;
+}
+
+.login-card {
+    width: 385px;
+    height: 330px;
+
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 35px 32px;
+
+    text-align: center;
+}
+
+.lock {
+    margin-bottom: 12px;
+    font-size: 25px;
+}
+
+.login-card h1 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.login-card p {
+    margin: 0 0 24px;
+
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-card input {
+    width: 100%;
+    height: 43px;
+
+    padding: 11px 13px;
+
+    border: 1px solid #d5deea;
+    border-radius: 7px;
+
+    background: #fff;
+    color: var(--text);
+
+    outline: none;
+}
+
+.login-card input:focus {
+    border-color: #7191bd;
+    box-shadow: 0 0 0 3px #21457814;
+}
+
+/* 
+   BOTÃO
+ */
+
+.primary-btn {
+    width: 100%;
+    height: 41px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: var(--navy);
+    color: #fff;
+
+    font-weight: 700;
+}
+
+.primary-btn:hover {
+    background: #193b69;
+}
+
+/* 
+   RODAPÉ
+ */
+
+footer {
+    height: 70px;
+
+    border-top: 1px solid var(--border);
+
+    color: #9aa7b9;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+   AJUDA
+ */
+
+.help {
+    position: fixed;
+    right: 14px;
+    bottom: 7px;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid #e0e4ea;
+    border-radius: 50%;
+
+    background: #fff;
+    color: #27384e;
+
+    font-size: 16px;
+
+    box-shadow: 0 2px 6px #0002;
+}

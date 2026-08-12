@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coordenação —  SAPO-Sistema de Achados e Perdidos Online</title>
+
+    <link rel="stylesheet" href="../styles/coordenacao.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="topbar">
+        <div class="nav-inner">
+
+            <a class="brand" href="itens.html">
+                <img class="logo" src="../components/Marca-da-UEPB-Aplicação-Colorida-em-PNG-1.png">
+
+                <span>
+                    <strong> SAPO-Sistema de Achados e Perdidos Online</strong>
+                    <small>UEPB · Campus VII</small>
+                </span>
+            </a>
+
+            <nav>
+                <a class="nav-link" href="itens.html">
+                    Ver Itens
+                </a>
+
+                <a class="nav-link active" href="coordenacao.html">
+                    Coordenação
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Conteúdo principal -->
+    <main class="coord-main">
+
+        <div class="admin-layout">
+
+            <!-- Formulário de cadastro -->
+            <aside class="form-card">
+
+                <h2>+ Cadastrar novo item</h2>
+
+                <form id="itemForm">
+
+                    <!-- Nome -->
+                    <label for="name">
+                        Nome do item *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Ex: Carteira preta"
+                        required
+                    >
+
+
+                    <!-- Descrição -->
+                    <label for="desc">
+                        Descrição *
+                    </label>
+
+                    <textarea
+                        id="desc"
+                        placeholder="Descreva o item com detalhes..."
+                        required
+                    ></textarea>
+
+
+                    <!-- Local -->
+                    <label for="location">
+                        Local encontrado *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="Ex: Bloco B, sala 05"
+                        required
+                    >
+
+
+                    <!-- Data -->
+                    <label for="date">
+                        Data encontrada *
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+
+
+                    <!-- Contato -->
+                    <label for="contact">
+                        Contato para retirada
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contact"
+                        value="Sala da Coordenação"
+                    >
+
+
+                    <!-- Foto -->
+                    <label for="photo">
+                        Foto do item
+                    </label>
+
+                    <input
+                        type="file"
+                        id="photo"
+                        accept="image/*"
+                    >
+
+                    <img
+                        id="photoPreview"
+                        class="photo-preview"
+                        style="display:none;"
+                    >
+
+
+                    <!-- Botão -->
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        + Cadastrar item
+                    </button>
+
+                </form>
+
+            </aside>
+
+
+            <!-- Lista de itens -->
+            <section class="items-panel">
+
+                <div class="panel-heading">
+
+                    <h2>
+                        Itens cadastrados
+
+                        <span
+                            class="count"
+                            id="count"
+                        >
+                            0
+                        </span>
+                    </h2>
+
+                    <a href="login.html">
+                        Sair
+                    </a>
+
+                </div>
+
+
+                <!-- Itens cadastrados serão inseridos aqui -->
+                <div id="items">
+
+                    <div class="empty">
+                        Nenhum item cadastrado ainda.
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+        SAPO-Sistema de Achados e Perdidos Online · UEPB Campus VII · Coordenação Acadêmica
+    </footer>
+
+
+    <!-- Botão de ajuda -->
+    <button
+        class="help"
+        type="button"
+        title="Ajuda"
+    >
+        ?
+    </button>
+
+
+
+    <script src="../services/coodecaoJS.js"></script>
+
+</body>
+
+</html>

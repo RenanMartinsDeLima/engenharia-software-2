@@ -7,18 +7,19 @@ async function abrirBanco() {
     driver: sqlite3.Database
   });
 
-  await db.exec(`
-    CREATE TABLE IF NOT EXISTS usuarios (
+  await db.exec(
+    // CREATE TABLE IF NOT EXISTS usuarios (
+      //   id INTEGER PRIMARY KEY AUTOINCREMENT,
+      //   nome TEXT,
+      //   email_institucional TEXT UNIQUE,
+      //   perfil TEXT
+      // );
+      `
+    CREATE TABLE IF NOT EXISTS itens (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       nome TEXT,
-      email_institucional TEXT UNIQUE,
-      perfil TEXT
-    );
-    CREATE TABLE IF NOT EXISTS pertences (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      titulo TEXT,
-      categoria TEXT,
-      status TEXT
+      descricao TEXT,
+      local_encontrado TEXT
     )
   `);
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso da Coordenação</title>
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="nav-inner">
+            <a class="brand" href="itens.html">
+                <img class="logo" src="../components/Marca-da-UEPB-Aplicação-Colorida-em-PNG-1.png">
+                <span>
+                    <strong> SAPO-Sistema de Achados e Perdidos Online</strong>
+                    <small>UEPB · Campus VII</small>
+                </span>
+            </a>
+            <nav>
+                <a class="nav-link" href="itens.html">Ver Itens</a>
+                <a class="nav-link active" href="login.html">Coordenação</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="login-main">
+        <section class="login-card">
+            <div class="lock">🔒</div>
+            <h1>Acesso da Coordenação</h1>
+            <p>Use seu e-mail institucional e senha para acessar</p>
+            
+            <form id="loginForm">
+                <input type="email" placeholder="email@uepb.edu.br" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit" class="primary-btn">Entrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        SAPO-Sistema de Achados e Perdidos Online · UEPB Campus VII · Coordenação Acadêmica
+    </footer>
+
+    <button class="help">?</button>
+
+    <script src="../services/login.js"></script>
+</body>
+</html>

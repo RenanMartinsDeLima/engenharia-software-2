@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
           VALUES (?, ?, ?)
         `, [u_nome, u_email, u_perfil] );
         await db.close();
-        res.status(200).json({ok : "usuario criado"});
+        res.status(201).json({ok : "usuario criado"});
     } catch (error) {
         res.status(500).json({erro : error})
     }
