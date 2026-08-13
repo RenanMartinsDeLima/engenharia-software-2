@@ -113,7 +113,7 @@ function formatDate(date) {
 }
 
 
-function removeItem(index) {
+async function removeItem(index) {
 
     const confirmation = confirm(
         "Deseja realmente remover este item?"
@@ -124,6 +124,12 @@ function removeItem(index) {
         return;
     }
 
+    await fetch('http://localhost:3000/itens', 
+        {   method: 'DELETE', 
+            headers: {'Content-Type': 'application/json'}, 
+            body: JSON.stringify(
+                {   id : index
+                })});
 
     // Remove o item
     items.splice(index, 1);
@@ -174,7 +180,7 @@ photoInput.addEventListener("change", function () {
 
 
 
-itemForm.addEventListener("submit", function (event) {
+itemForm.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
@@ -227,7 +233,15 @@ itemForm.addEventListener("submit", function (event) {
         available: true
 
     };
-
+    await fetch('http://localhost:3000/itens', 
+        {   method: 'POST', 
+            headers: {'Content-Type': 'application/json'}, 
+            body: JSON.stringify(
+                {   nome: name,
+                    descricao: desc,
+                    local_encontrado: location,
+                    data_encontrada: date
+                })});
 
     // Adiciona à lista
     items.push(newItem);

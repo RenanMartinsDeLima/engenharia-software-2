@@ -19,7 +19,8 @@ async function abrirBanco() {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       nome TEXT,
       descricao TEXT,
-      local_encontrado TEXT
+      local_encontrado TEXT,
+      data_encontrada TEXT
     )
   `);
 
